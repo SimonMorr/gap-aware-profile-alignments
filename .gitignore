@@ -1,0 +1,27 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Large event logs & derived Petri nets — not distributed (see README)
+data/
+
+# Generated results, caches, logs
+output/
+.cache/
+*.log
+
+# Local heatmap variant of the visualiser (depends on pm4py, AGPL — not published)
+visualize_results_with_heatmaps.py
+
+# Frontend tool (cluster_ui)
+cluster_ui/node_modules/
+cluster_ui/dist/
+cluster_ui/.vite/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/

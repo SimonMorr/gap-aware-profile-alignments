@@ -1,0 +1,26 @@
+:root{
+  --bg:#F7F8FA; --panel:#FFFFFF; --panel-2:#FBFCFD;
+  --ink:#1B2430; --ink-soft:#5A6675; --ink-faint:#8A94A2;
+  --line:#E2E6EC; --line-strong:#CDD4DC;
+  --accent:#E0662B; --link:#8894A4;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace;
+}
+/* dark palette: OS default, unless an explicit ?theme=light forces light */
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1116; --panel:#161B22; --panel-2:#12161C;
+  --ink:#E6EAF0; --ink-soft:#98A3B2; --ink-faint:#6B7686;
+  --line:#232A33; --line-strong:#2E3742;
+  --accent:#F0864E; --link:#4A5563;
+}}
+/* explicit ?theme=dark wins even under a light OS */
+:root[data-theme="dark"]{
+  --bg:#0E1116; --panel:#161B22; --panel-2:#12161C;
+  --ink:#E6EAF0; --ink-soft:#98A3B2; --ink-faint:#6B7686;
+  --line:#232A33; --line-strong:#2E3742;
+  --accent:#F0864E; --link:#4A5563;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5;
+  -webkit-font-smoothing:antialiased}

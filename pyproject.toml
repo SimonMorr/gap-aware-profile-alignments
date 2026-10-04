@@ -1,0 +1,27 @@
+[project]
+name = "gap-aware-profile-alignments"
+version = "0.1.0"
+description = "Gap-aware and profile-based trace-to-model alignments for process deviation diagnostics (Rust4PM Petri nets)"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = { text = "MIT" }
+dependencies = [
+    "r4pm>=0.6.0",
+    "polars>=1.0.0",
+    "networkx>=3.0",
+]
+
+[project.optional-dependencies]
+# Evaluation + figures (boxplots, gap-length distributions, cluster diagnostics)
+viz = [
+    "matplotlib>=3.7",
+    "pandas>=2.0",
+    "numpy>=1.24",
+]
+# Interactive clustering/profile exploration tool (cluster_api.py + cluster_ui/)
+tool = [
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+    "pydantic>=2.0",
+]
+dev = ["pytest>=8.0"]
